@@ -10,8 +10,14 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @MapperScan("top.lzzzs.mapper")
 public class MybatisPlusConfig {
+
+    /**
+     * 分页插件
+     */
     @Bean
     public PaginationInterceptor paginationInterceptor() {
         return new PaginationInterceptor();
     }
+
+
 }
